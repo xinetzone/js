@@ -53,13 +53,12 @@ class DomStarter extends HTMLElement {
     const home = this.addLi('./index.html', "fa fa-home", '首页')
     const about = this.addLi('./about.html', "fa fa-user-circle", '关于')
     const book = this.addLi('./book.html', "fa fa-search", '资料库')
-    const products = this.addLi('./products.html', "fa fa-archive", '产品')
     const contact = this.addLi('./contact.html', "fa fa-comments", '联系')
     contact.classList.add('push')
     const help = this.addLi('./help.html', "fa fa-question", '帮助')
 
     nav.appendChild(ul)
-    ul.append(home, about, book, products, contact, help)
+    ul.append(home, about, book, contact, help)
     return nav
   }
 }
