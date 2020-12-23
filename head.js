@@ -10,7 +10,7 @@ function addHead() {
     addStartAfter(headTitle)
     let componentScript = document.createElement('script')
     componentScript.type = 'module'
-    componentScript.src = "./scripts/components.js"
+    componentScript.src = "./components.js"
     componentScript.defer = true
     head.append(componentScript)
 }
