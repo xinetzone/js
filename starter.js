@@ -14,17 +14,17 @@ class StartBlock {
     }
     static w3css() {
         // 添加 w3-css 主题
-        const href = "./styles/w3css/4/w3.css"
+        const href = "./xinet-css/w3css/4/w3.css"
         return StartBlock.createLink(href)
     }
 
     static complexCSS() {
-        const href = "./styles/complex.css"
+        const href = "./xinet-css/complex.css"
         return StartBlock.createLink(href)
     }
 
     static homeCSS() {
-        const href = "./styles/home.css"
+        const href = "./xinet-css/home.css"
         return StartBlock.createLink(href)
     }
 }

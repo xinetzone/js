@@ -10,7 +10,7 @@ function addHead() {
     addStartAfter(headTitle)
     let componentScript = document.createElement('script')
     componentScript.type = 'module'
-    componentScript.src = "./components.js"
+    componentScript.src = "./xinet-js/components.js"
     componentScript.defer = true
     head.append(componentScript)
 }
