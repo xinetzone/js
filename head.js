@@ -11,7 +11,7 @@ function addHead() {
     let componentScript = document.createElement('script')
     componentScript.type = 'module'
     componentScript.src = "./xinet-js/components.js"
-    componentScript.defer = true
+    componentScript.async = true
     head.append(componentScript)
 }
 
