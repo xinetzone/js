@@ -21,11 +21,10 @@ function deletePreWhiteSpace() {
 function deleteParaWhiteSpace() {
     let paras = document.querySelectorAll('p')
     for (let para of paras) {
-        // 删除代码块首尾空白符
-        const text = para.innerHTML.trim()
-        /* # 删除多余的换行符以及换行符后面的空白符 */
-        const spaceReg = /[\n\r\s+]/
-        let outText = text.replace(spaceReg, '')
+        // 删除全部空白符
+        const text = para.innerHTML.replace(/\s+/g, '')
+        // 删除多余的换行符 
+        let outText = text.replace(/[\n\r]/g, '')
         para.innerHTML = outText
     }
 }
