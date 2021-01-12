@@ -8,24 +8,26 @@ function deletePreWhiteSpace() {
         // 删除代码块首尾空白符
         const text = block.textContent.trim()
         /* # 删除每行的开头的多余空白符 */
-        let array = text.split('\n')
+        let array = text.split(/[\r\t\n]/)
         const lastElement = array[array.length - 1]
         const spaceNum = lastElement.search(/\S/)
         const spaceReg = RegExp(`(\\s{${spaceNum}})`)
         const array1 = array.map(strings => strings.replace(spaceReg, ''))
-        let outText = array1.join('\n')
+        const outText = array1.join('\n')
         block.textContent = outText
     }
 }
 
 function deleteParaWhiteSpace() {
     let paras = document.querySelectorAll('p')
-    for (let para of paras) {
-        // 删除全部空白符
-        const text = para.innerHTML.replace(/\s+/g, '')
-        // 删除多余的换行符 
-        let outText = text.replace(/[\n\r]/g, '')
-        para.innerHTML = outText
+    for (let block of paras) {
+        const text = block.innerHTML
+        let array = text.split(/[\r\t\n]/)
+        // 删除多余的换行符
+        const array1 = array.map(strings => strings.trim())
+        // 删除多余的空白符
+        const outText = array1.join('')
+        block.innerHTML = outText
     }
 }
 
