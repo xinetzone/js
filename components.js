@@ -24,12 +24,11 @@ class BlockCode extends HTMLPreElement {
 customElements.define("block-code", BlockCode, { extends: 'pre' })
 
 class DomStarter extends HTMLElement {
-  constructor(articleClass='w3-blue w3-padding w3-top', navClass='w3-center') {
+  constructor(navClass='w3-center') {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
     this.article = document.createElement('article')
     this.header = document.createElement('header')
-    this.article.classList.add(...articleClass.split(' '))
     this.nav = this.createNav(navClass)
 
     this.shadow.append(this.article)
@@ -47,7 +46,6 @@ class DomStarter extends HTMLElement {
   createNav(navClass) {
     const nav = document.createElement('nav')
     nav.classList.add(...navClass.split(' '))
-
     const ul = document.createElement('ul')
     ul.classList.add('main-nav')
     const home = this.addLi('./index.html', "fa fa-home", '首页')
@@ -66,9 +64,8 @@ class DomStarter extends HTMLElement {
 customElements.define("dom-starter", DomStarter)
 
 class PageHeader extends DomStarter {
-  constructor(articleClass='w3-blue w3-padding w3-top', navClass='w3-center') {
-    super(articleClass, navClass)
-    // this.article.innerHTML += `<h2 class='w3-center'>上善若水</h2>`
+  constructor(navClass='w3-center w3-card w3-top w3-blue') {
+    super(navClass)
   }
 }
 
