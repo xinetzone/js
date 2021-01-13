@@ -24,7 +24,7 @@ class BlockCode extends HTMLPreElement {
 customElements.define("block-code", BlockCode, { extends: 'pre' })
 
 class DomStarter extends HTMLElement {
-  constructor(articleClass = 'w3-blue w3-padding', navClass = 'w3-center') {
+  constructor(articleClass='w3-blue w3-padding w3-top', navClass='w3-center') {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
     this.article = document.createElement('article')
