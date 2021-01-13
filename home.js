@@ -12,7 +12,7 @@ function main() {
   inlineCodeTomd()
   let body = document.body
   // 添加主题
-  body.classList.add('w3-padding', 'w3-pale-yellow')
+  body.classList.add('w3-pale-yellow')
 }
 
 /* 函数调用 */
