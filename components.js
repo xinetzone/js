@@ -66,7 +66,7 @@ class DomStarter extends HTMLElement {
 customElements.define("dom-starter", DomStarter)
 
 class PageHeader extends DomStarter {
-  constructor(articleClass = 'w3-blue w3-round', navClass = 'w3-center') {
+  constructor(articleClass='w3-blue w3-padding w3-top', navClass='w3-center') {
     super(articleClass, navClass)
     // this.article.innerHTML += `<h2 class='w3-center'>上善若水</h2>`
   }
