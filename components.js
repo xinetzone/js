@@ -64,7 +64,8 @@ class DomStarter extends HTMLElement {
 customElements.define("dom-starter", DomStarter)
 
 class PageHeader extends DomStarter {
-  constructor(navClass='w3-center w3-card w3-top w3-blue') {
+  // w3-top 
+  constructor(navClass='w3-center w3-card w3-blue') {
     super(navClass)
   }
 }
