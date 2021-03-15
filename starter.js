@@ -27,6 +27,11 @@ class StartBlock {
         const href = "./xinet-css/home.css"
         return StartBlock.createLink(href)
     }
+
+    static tabCSS() {
+        const href = "./xinet-css/tabs.css"
+        return StartBlock.createLink(href)
+    }
 }
 
 function addStartAfter(parent) {
@@ -38,7 +43,8 @@ function addStartAfter(parent) {
 
 function addStart(parent) {
     parent.append(StartBlock.w3css(), StartBlock.homeCSS(),
+        StartBlock.tabCSS(),
         StartBlock.fontAwesome(), StartBlock.complexCSS())
 }
 
-export { addStart, addStartAfter}
+export { addStart, addStartAfter }

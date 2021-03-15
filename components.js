@@ -24,7 +24,7 @@ class BlockCode extends HTMLPreElement {
 customElements.define("block-code", BlockCode, { extends: 'pre' })
 
 class DomStarter extends HTMLElement {
-  constructor(navClass='w3-center') {
+  constructor(navClass = 'w3-center') {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
     this.article = document.createElement('article')
@@ -54,7 +54,7 @@ class DomStarter extends HTMLElement {
     const help = this.addLi('./help.html', "fa fa-question", '帮助')
     about.classList.add('push')
     // const contact = this.addLi('./contact.html', "fa fa-comments", '联系')
-    
+
     nav.appendChild(ul)
     ul.append(home, book, about, help)
     return nav
@@ -65,7 +65,7 @@ customElements.define("dom-starter", DomStarter)
 
 class PageHeader extends DomStarter {
   // w3-top 
-  constructor(navClass='w3-center w3-card w3-blue') {
+  constructor(navClass = 'w3-center w3-card w3-blue') {
     super(navClass)
   }
 }
@@ -84,3 +84,17 @@ class UserCard extends HTMLElement {
 }
 
 customElements.define("user-card", UserCard)
+
+customElements.define("page-header", PageHeader)
+
+class TabedTool extends HTMLElement {
+  constructor() {
+    super()
+    this.shadow = this.attachShadow({ mode: 'open' })
+    this.shadow.classList.add('w3-card', 'w3-pale-green',
+      'w3-padding-small', 'w3-round-xlarge', 'w3-text-purple')
+    addStart(this.shadow)
+  }
+}
+
+customElements.define('tabed-tool', TabedTool, { extends: 'article' })
