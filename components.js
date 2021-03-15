@@ -85,8 +85,6 @@ class UserCard extends HTMLElement {
 
 customElements.define("user-card", UserCard)
 
-customElements.define("page-header", PageHeader)
-
 class TabedTool extends HTMLElement {
   constructor() {
     super()
