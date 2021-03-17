@@ -1,4 +1,5 @@
 // 添加元素信息开始的配置信息
+const baseUrl = "https://xinetzone.github.io"
 
 class StartBlock {
     static createLink(href, rel = "stylesheet") {
@@ -14,22 +15,22 @@ class StartBlock {
     }
     static w3css() {
         // 添加 w3-css 主题
-        const href = "./xinet-css/w3css/4/w3.css"
+        const href = baseUrl+"/xinet-css/w3css/4/w3.css"
         return StartBlock.createLink(href)
     }
 
     static complexCSS() {
-        const href = "./xinet-css/complex.css"
+        const href = baseUrl+"/xinet-css/complex.css"
         return StartBlock.createLink(href)
     }
 
     static homeCSS() {
-        const href = "./xinet-css/home.css"
+        const href = baseUrl+"/xinet-css/home.css"
         return StartBlock.createLink(href)
     }
 
     static tabCSS() {
-        const href = "./xinet-css/tabs.css"
+        const href = baseUrl+"/xinet-css/tabs.css"
         return StartBlock.createLink(href)
     }
 }
