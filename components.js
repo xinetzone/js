@@ -1,6 +1,6 @@
 'use strict'
 
-import { addStart } from './starter.js'
+import { addStart } from 'starter.js'
 
 // 定义内联代码样式
 class InlineCode extends HTMLElement {

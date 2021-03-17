@@ -1,8 +1,8 @@
 'use strict'
 
-import { addHead } from './head.js'
-import { deletePreWhiteSpace, deleteParaWhiteSpace } from './utils/delete-white-space.js'
-import { inlineCodeTomd } from './utils/markdown.js'
+import { addHead } from 'head.js'
+import { deletePreWhiteSpace, deleteParaWhiteSpace } from 'utils/delete-white-space.js'
+import { inlineCodeTomd } from 'utils/markdown.js'
 
 // 主函数
 function main() {

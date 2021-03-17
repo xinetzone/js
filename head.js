@@ -1,6 +1,6 @@
 'use strict'
 
-import { addStartAfter } from './starter.js'
+import { addStartAfter } from 'starter.js'
 
 // 主函数
 function addHead() {
@@ -10,7 +10,7 @@ function addHead() {
     addStartAfter(headTitle)
     let componentScript = document.createElement('script')
     componentScript.type = 'module'
-    componentScript.src = "./xinet-js/components.js"
+    componentScript.src = "xinet-js/components.js"
     componentScript.async = true
     head.append(componentScript)
 }
