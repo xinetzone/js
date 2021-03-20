@@ -11,7 +11,8 @@ class StartBlock {
     static fontAwesome() {
         // 添加 font-awesome 图标支持
         // const href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        const href = baseUrl+"/Font-Awesome/css/fontawesome.min.css"
+        // Font Awesome 5
+        const href = baseUrl+"/Font-Awesome/css/all.css"
         return StartBlock.createLink(href)
     }
     static w3css() {
